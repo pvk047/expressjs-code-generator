@@ -1,0 +1,33 @@
+{
+  "name": "test-nodejs",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest",
+    "dev": "nodemon --exec babel-node ./src/index.js",
+    "build": "babel src --out-dir ./dist --source-maps",
+    "create-entity": "babel-node ./src/createAEntity.js",
+    "jest": {
+      "transform": {
+        "^.+\\.jsx?$": "babel-jest"
+      }
+    }
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/cli": "^7.8.4",
+    "@babel/core": "^7.9.6",
+    "@babel/node": "^7.8.7",
+    "@babel/preset-env": "^7.9.6",
+    "@babel/register": "^7.9.0",
+    "dotenv": "^8.2.0",
+    "nodemon": "^2.0.3",
+    "pluralize": "^8.0.0"
+  },
+  "dependencies": {
+    "jest-cli": "^26.0.1"
+  }
+}
