@@ -17,6 +17,11 @@ async function createADataServiceProvider (entity) {
   }
 
   const mainPath = path.join(PROJECT_PATH, dataServiceProviderConfig.path)
+
+  if (!isFileExists(mainPath)) {
+    createADirectory(mainPath)
+  }
+
   const dataServiceProviderPath = path.join(mainPath, `${entity}DataServiceProvider.js`)
 
   if (isFileExists(dataServiceProviderPath)) {

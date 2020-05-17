@@ -1,6 +1,8 @@
 import model from './modelConfig'
 import controller from './controllerConfig'
 import dataServiceProvider from './dataServiceProviderConfig'
+import validationSchemaConfig from './validationSchemaConfig'
+import listAPISchemaConfig from './listAPISchemaConfig'
 
 import dotenv from 'dotenv'
 dotenv.config()
@@ -20,5 +22,7 @@ export default {
   controller,
   model,
   dataServiceProvider,
+  validationSchemaConfig,
+  listAPISchemaConfig,
   PROJECT_PATH: projectPath
 }

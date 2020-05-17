@@ -28,6 +28,10 @@ async function createAModel(entity) {
   }
 
   const mainPath = path.join(PROJECT_PATH, modelConfig.path)
+  if (!isFileExists(mainPath)) {
+    createADirectory(mainPath)
+  }
+  
   const modelPath = path.join(mainPath, `${entity}Model.js`)
 
   if (isFileExists(modelPath)) {

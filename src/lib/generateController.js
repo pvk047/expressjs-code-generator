@@ -19,6 +19,11 @@ async function createAController(entity) {
   }
 
   const mainPath = path.join(PROJECT_PATH, controllerConfig.path)
+  
+  if (!isFileExists(mainPath)) {
+    createADirectory(mainPath)
+  }
+
   const controllerPath = path.join(mainPath, `${entity}Controller.js`)
 
   if (isFileExists(controllerPath)) {
