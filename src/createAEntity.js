@@ -4,6 +4,7 @@ import { createADataServiceProvider } from './lib/generateDataServiceProvider'
 import { createAModel } from './lib/generateModel'
 import { createAValidationSchema } from './lib/generateValidationSchema'
 import { createAListAPISchema } from './lib/generateListAPIDataSchema'
+import { createARoute } from './lib/generateRoute'
 
 import config from './config/index'
 const PROJECT_PATH = config.PROJECT_PATH
@@ -19,6 +20,8 @@ async function generateCode(entity) {
   
   await createAValidationSchema(entity)
   await createAListAPISchema(entity)
+
+  await createARoute(entity)
 }
 
 (async function () {

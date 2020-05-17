@@ -3,6 +3,7 @@ import controller from './controllerConfig'
 import dataServiceProvider from './dataServiceProviderConfig'
 import validationSchemaConfig from './validationSchemaConfig'
 import listAPISchemaConfig from './listAPISchemaConfig'
+import routerConfig from './routerConfig'
 
 import dotenv from 'dotenv'
 dotenv.config()
@@ -24,5 +25,6 @@ export default {
   dataServiceProvider,
   validationSchemaConfig,
   listAPISchemaConfig,
+  routerConfig,
   PROJECT_PATH: projectPath
 }
