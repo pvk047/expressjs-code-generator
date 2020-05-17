@@ -28,7 +28,7 @@ async function createAListAPISchema(entity) {
   const listAPISchemaPath = path.join(mainPath, `list${toTitleCase(toPlural(entity))}DataSchema.js`)
 
   if (isFileExists(listAPISchemaPath)) {
-    const newPath = path.join(mainPath, entity, `list${toTitleCase(toPlural(entity))}DataSchema.1.js`)
+    const newPath = path.join(mainPath, `list${toTitleCase(toPlural(entity))}DataSchema.1.js`)
     renameFile(listAPISchemaPath, newPath)
   }
 
